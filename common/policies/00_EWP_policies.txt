@@ -1,0 +1,188 @@
+# seems i cannot use shipclass and have to use shipsize
+# okay so _build_cost_ seems deprecated, simply use ship_x_cost_mult
+
+# TODO, change all modifiers to only apply to military ships
+# add AI weights, maybe a script to count ships
+# weapon specialization
+# defense specialization
+# army specialization ?
+# add ewp before all names
+# add newlines in localizations
+
+ship_doctrine = {
+	potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = enclave_mercenary
+			}
+			# now how to make this tell you that you can pick something
+			# disabling for now due to testing reasons, also might
+			# have to pick a more appropriate tech
+			# has_technology = tech_interstellar_fleet_traditions
+	}
+
+	option = {
+		name = "ewl_no_focus"
+
+		policy_flags = {}
+
+		modifier = {
+			shipclass_military_build_cost_mult = -0.05
+			shipclass_military_build_speed_mult = 0.05
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "small_focus"
+
+		policy_flags = {}
+
+		modifier = {
+			
+			# They get speed, evasion and disengagement
+			shipsize_corvette_speed_mult = 0.20
+			shipsize_corvette_build_speed_mult = 0.15
+			shipsize_corvette_evasion_add = 5
+			shipsize_corvette_disengage_chance_mult = 0.10
+			shipsize_corvette_hull_mult = 0.15 # for versatility 
+
+			shipsize_frigate_speed_mult = 0.20
+			shipsize_frigate_damage_against_starbases_mult = 0.20
+			shipsize_frigate_build_speed_mult = 0.15
+			# frigate cost mult isnt a thing
+			shipsize_frigate_evasion_add = 5
+			shipsize_frigate_disengage_chance_mult = 0.10
+
+			# Global bonuses reflecting us building our fleets around these
+			ship_evasion_add = 5
+			ship_speed_mult = 0.10
+			ship_hull_mult = -0.15 	
+
+			# global eco mali
+			ship_destroyer_cost_mult = 0.10
+			ship_cruiser_cost_mult = 0.10
+			ship_battleship_cost_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "destroyer_focus"
+
+		valid = {
+			has_technology = tech_destroyers
+		}
+
+		policy_flags = {}
+
+		# increase weapon range and accuracy to help
+		# with artillery and picket role
+		modifier = {
+			# eco boni
+			shipsize_destroyer_build_speed_mult = 0.10
+			ship_destroyer_cost_mult = -0.10
+
+			# role improvement
+			shipsize_destroyer_tracking_add = 5
+			shipsize_destroyer_accuracy_add = 15
+			shipsize_destroyer_weapon_range_mult = 0.20
+
+			# versatility
+			shipsize_destroyer_speed_mult = 0.15
+
+			# global bonuses
+			ship_tracking_add = 10
+
+			# global eco mali
+			ship_corvette_cost_mult = 0.10
+			ship_cruiser_cost_mult = 0.10
+			ship_battleship_cost_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "cruiser_focus"
+
+		valid = {
+			has_technology = tech_cruisers
+		}
+
+		policy_flags = {}
+
+		# cost efficiency is the name of the game
+		modifier = {
+			# eco boni
+			shipsize_cruiser_build_speed_mult = 0.15
+			ship_cruiser_cost_mult = -0.15
+
+			# role improvement and versatility in one
+			shipsize_cruiser_hull_mult = 0.15
+			shipsize_cruiser_shield_mult = 0.15
+			shipsize_cruiser_armor_mult = 0.15
+
+			shipsize_cruiser_evasion_add = 5
+			shipsize_cruiser_accuracy_add = 5
+			shipsize_cruiser_tracking_add = 5
+			# no global bonuses
+
+			# global eco mali
+			ship_corvette_cost_mult = 0.10
+			ship_destroyer_cost_mult = 0.10
+			ship_battleship_cost_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	# accuracy, long range
+	option = {
+		name = "battleship_focus"
+
+		valid = {
+			has_technology = tech_battleships
+		}
+
+		policy_flags = {}
+
+		modifier = {
+			# eco boni
+			shipsize_battleship_build_speed_mult = 0.10
+			ship_battleship_cost_mult = -0.10
+
+			# role improvement
+			shipsize_battleship_accuracy_add = 5
+			shipsize_battleship_weapon_range_mult = 0.10
+
+			# versatility
+			shipsize_battleship_speed_mult = 0.15
+
+			# global bonuses - large powerful ships
+			ship_hull_mult = 0.15
+			ship_speed_mult = -0.15
+			ship_accuracy_add = 5
+
+			# global eco mali
+			ship_corvette_cost_mult = 0.10
+			ship_destroyer_cost_mult = 0.10
+			ship_cruiser_cost_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+}
