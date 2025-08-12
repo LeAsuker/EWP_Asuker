@@ -1,0 +1,78 @@
+﻿l_english:
+
+  policy_ewp_ship_doctrine: "Ship Doctrine"
+  policy_ewp_ship_doctrine_desc: "Here we can decide what shipsize our empire should specialize in."
+
+  ewp_no_focus: "No Focus"
+  ewp_no_focus_desc: "Versatility is Virtue."
+
+  ewp_small_focus: "Small Ship Focus"
+  ewp_small_focus_desc: "A mobile fleet built around corvettes and frigates is the future of war."
+
+  ewp_destroyer_focus: "Destroyer Focus"
+  ewp_destroyer_focus_desc: "Our enemies will break their backs against our well-defended fleets."
+
+  ewp_cruiser_focus: "Cruiser Focus"
+  ewp_cruiser_focus_desc: "In our diverse galaxy, fleets must be versatile and ready to face all threats. \n "
+
+  ewp_battleship_focus: "Capital Focus"
+  ewp_battleship_focus_desc: "All will tremble before our grand capital ships! \n "
+
+  mod_shipsize_corvette_speed_mult: "Corvette Speed"
+  mod_shipsize_corvette_evasion_add: "Corvete Evasion"
+  mod_shipsize_corvette_disengage_chance_mult: "Corvette Disengagement Chance"
+
+  mod_shipsize_frigate_speed_mult: "Frigate Speed"
+  mod_shipsize_frigate_damage_against_starbases_mult: "Frigate Damage Against Starbases"
+  mod_shipsize_frigate_build_speed_mult: "Frigate Build Speed"
+  mod_shipsize_frigate_evasion_add: "Frigate Evasion"
+  mod_shipsize_frigate_disengage_chance_mult: "Frigate Disengagement Chance"
+
+  mod_shipsize_destroyer_starting_experience_add: "Destroyer Starting Experience"
+
+  mod_shipsize_destroyer_tracking_add: "Destroyer Tracking"
+  mod_shipsize_destroyer_accuracy_add: "Destroyer Accuracy"
+  mod_shipsize_destroyer_weapon_range_mult: "Destroyer Weapon Range"
+  mod_shipsize_destroyer_speed_mult: "Destroyer Speed"
+
+  mod_shipsize_cruiser_shield_mult: "Cruiser Shields"
+  mod_shipsize_cruiser_armor_mult: "Cruiser Armor"
+  mod_shipsize_cruiser_evasion_add: "Cruiser Evasion"
+  mod_shipsize_cruiser_accuracy_add: "Cruiser Accuracy"
+  mod_shipsize_cruiser_tracking_add: "Cruiser Tracking"
+
+  mod_shipsize_battleship_accuracy_add: "Battleship Accuracy"
+  mod_shipsize_battleship_weapon_range_mult: "Battleship Weapon Range"
+  mod_shipsize_battleship_speed_mult: "Battleship Speed"
+
+  mod_shipclass_military_build_cost_mult: "Military Ship Build Cost"
+
+  policy_ewp_weapon_doctrine: "Offensive Specialization"
+  policy_ewp_weapon_doctrine_desc: "Here we can decide what type of weaponry our empire should specialize in."
+  ewp_no_weapon_focus: "No specialization"
+  ewp_no_weapon_focus_desc: "No specialization"
+  ewp_kinetic_focus: "Kinetic Specialization"
+  ewp_kinetic_focus_desc: "REPLACE_ME"
+  ewp_energy_focus: "Energy Specialization"
+  ewp_energy_focus_desc: "REPLACE_ME"
+  ewp_explosive_focus: "Explosive Specialization"
+  ewp_explosive_focus_desc: "REPLACE_ME"
+  ewp_carrier_focus: "Carrier Operations Specialization"
+  ewp_carrier_focus_desc: "REPLACE_ME"
+  ewp_exotic_focus: "Exotic Weaponry Specialization"
+  ewp_exotic_focus_desc: "REPLACE_ME"
+  ewp_archeo_wep_focus: "Ancient Weaponry Specialization"
+  ewp_archeo_wep_focus_desc: "REPLACE_ME"
+
+  policy_ewp_defense_doctrine: "Defensive Specialization"
+  policy_ewp_defense_doctrine_desc: "REPLACE_ME"
+  ewp_no_defense_focus: "No Specialization"
+  ewp_no_defense_focus_desc: "REPLACE_ME"
+  ewp_armor_focus: "Armor Specialization"
+  ewp_armor_focus_desc: "REPLACE_ME"
+  ewp_shield_focus: "Shield Specialization"
+  ewp_shield_focus_desc: "REPLACE_ME"
+  ewp_flak_focus: "Flak Specialization"
+  ewp_flak_focus_desc: "REPLACE_ME"
+  ewp_archeo_def_focus: "Ancient Defenses Specialization"
+  ewp_archeo_def_focus_desc: "REPLACE_ME"

@@ -1,0 +1,147 @@
+# seems i cannot use shipclass and have to use shipsize
+# okay so _build_cost_ seems deprecated, simply use ship_x_cost_mult
+
+# TODO, change all modifiers to only apply to military ships
+# add AI weights, maybe a script to count ships
+# weapon specialization
+# defense specialization
+# army specialization ?
+# add ewp before all names X
+# add newlines in localizations
+
+ewp_weapon_doctrine = {
+	potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = enclave_mercenary
+			}
+			# now how to make this tell you that you can pick something
+			# disabling for now due to testing reasons, also might
+			# have to pick a more appropriate tech
+			# has_technology = tech_interstellar_fleet_traditions
+	}
+
+	option = {
+		name = "ewp_no_weapon_focus"
+
+		policy_flags = {}
+
+		modifier = {
+			shipclass_military_build_cost_mult = -0.05
+			shipclass_military_build_speed_mult = 0.05
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ewp_kinetic_focus"
+
+		policy_flags = {}
+
+		modifier = {
+			
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ewp_energy_focus"
+
+		valid = {
+			has_technology = tech_destroyers
+		}
+
+		policy_flags = {}
+
+		# increase weapon range and accuracy to help
+		# with artillery and picket role
+		modifier = {
+
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ewp_explosive_focus"
+
+		valid = {
+			has_technology = tech_cruisers
+		}
+
+		policy_flags = {}
+
+		# cost efficiency is the name of the game
+		modifier = {
+
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	# accuracy, long range
+	option = {
+		name = "ewp_carrier_focus"
+
+		valid = {
+			has_technology = tech_battleships
+		}
+
+		policy_flags = {}
+
+		modifier = {
+
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ewp_exotic_focus"
+
+		valid = {
+			has_technology = tech_battleships
+		}
+
+		policy_flags = {}
+
+		modifier = {
+
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ewp_archeo_wep_focus"
+
+		valid = {
+			has_technology = tech_battleships
+		}
+
+		policy_flags = {}
+
+		modifier = {
+
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+}

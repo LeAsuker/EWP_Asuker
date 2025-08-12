@@ -6,10 +6,10 @@
 # weapon specialization
 # defense specialization
 # army specialization ?
-# add ewp before all names
+# add ewp before all names X
 # add newlines in localizations
 
-ship_doctrine = {
+ewp_ship_doctrine = {
 	potential = {
 			OR = {
 				is_country_type = default
@@ -22,7 +22,7 @@ ship_doctrine = {
 	}
 
 	option = {
-		name = "ewl_no_focus"
+		name = "ewp_no_focus"
 
 		policy_flags = {}
 
@@ -37,7 +37,7 @@ ship_doctrine = {
 	}
 
 	option = {
-		name = "small_focus"
+		name = "ewp_small_focus"
 
 		policy_flags = {}
 
@@ -74,7 +74,7 @@ ship_doctrine = {
 	}
 
 	option = {
-		name = "destroyer_focus"
+		name = "ewp_destroyer_focus"
 
 		valid = {
 			has_technology = tech_destroyers
@@ -112,7 +112,7 @@ ship_doctrine = {
 	}
 
 	option = {
-		name = "cruiser_focus"
+		name = "ewp_cruiser_focus"
 
 		valid = {
 			has_technology = tech_cruisers
@@ -149,7 +149,7 @@ ship_doctrine = {
 
 	# accuracy, long range
 	option = {
-		name = "battleship_focus"
+		name = "ewp_battleship_focus"
 
 		valid = {
 			has_technology = tech_battleships
