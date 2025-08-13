@@ -16,26 +16,35 @@ ewp_defense_doctrine = {
 		policy_flags = {}
 
 		modifier = {
-			shipclass_military_build_cost_mult = -0.05
-			shipclass_military_build_speed_mult = 0.05
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
 	option = {
 		name = "ewp_armor_focus"
 
+		valid = {
+			has_technology = tech_ship_armor_3
+		}
+
 		policy_flags = {}
 
 		modifier = {
-			
+			ship_armor_mult = 0.15
+			category_materials_draw_chance_mult = 0.10
+
+			ship_shield_mult = -0.15
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
+			modifier = {
+				factor = 2
+				has_trait = trait_natural_engineers
+			}
 		}
 	}
 
@@ -43,19 +52,24 @@ ewp_defense_doctrine = {
 		name = "ewp_shield_focus"
 
 		valid = {
-			has_technology = tech_destroyers
+			has_technology = tech_shields_3
 		}
 
 		policy_flags = {}
 
-		# increase weapon range and accuracy to help
-		# with artillery and picket role
 		modifier = {
-
+			ship_shield_mult = 0.15
+			category_field_manipulation_draw_chance_mult = 0.10
+			
+			ship_armor_mult = -0.15
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
+			modifier = {
+				factor = 2
+				has_trait = trait_natural_physicists
+			}
 		}
 	}
 
@@ -63,37 +77,28 @@ ewp_defense_doctrine = {
 		name = "ewp_flak_focus"
 
 		valid = {
-			has_technology = tech_cruisers
-		}
-
-		policy_flags = {}
-
-		# cost efficiency is the name of the game
-		modifier = {
-
-		}
-
-		AI_weight = {
-			factor = 1
-		}
-	}
-
-	# accuracy, long range
-	option = {
-		name = "ewp_archeo_def_focus"
-
-		valid = {
-			has_technology = tech_battleships
+			OR = {
+				has_technology = tech_pd_tracking_2
+				has_technology = tech_flak_batteries_2
+			}
 		}
 
 		policy_flags = {}
 
 		modifier = {
+			screen_weapon_damage_mult = 0.25
+			screen_weapon_fire_rate_mult = 0.25
 
+			category_computing_draw_chance_mult = 0.10
+			category_propulsion_draw_chance_mult = 0.10
+
+			ship_shield_mult = -0.10
 		}
 
 		AI_weight = {
-			factor = 1
+			# AI wont use this, too specific.
+			# might code it in later
+			weight = 0
 		}
 	}
 

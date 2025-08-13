@@ -3,11 +3,13 @@
 
 # TODO, change all modifiers to only apply to military ships
 # add AI weights, maybe a script to count ships
-# weapon specialization
-# defense specialization
-# army specialization ?
+# weapon specialization X
+# defense specialization X
+
 # add ewp before all names X
-# add newlines in localizations
+# add newlines in localizations X
+# Shorten localization names X
+# increment index so it loads at the end
 
 ewp_ship_doctrine = {
 	potential = {
@@ -32,12 +34,17 @@ ewp_ship_doctrine = {
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
 	option = {
 		name = "ewp_small_focus"
+
+		# maybe change this later
+		valid = {
+			has_technology = tech_interstellar_fleet_traditions
+		}
 
 		policy_flags = {}
 
@@ -53,7 +60,6 @@ ewp_ship_doctrine = {
 			shipsize_frigate_speed_mult = 0.20
 			shipsize_frigate_damage_against_starbases_mult = 0.20
 			shipsize_frigate_build_speed_mult = 0.15
-			# frigate cost mult isnt a thing
 			shipsize_frigate_evasion_add = 5
 			shipsize_frigate_disengage_chance_mult = 0.10
 
@@ -69,7 +75,7 @@ ewp_ship_doctrine = {
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
@@ -78,6 +84,7 @@ ewp_ship_doctrine = {
 
 		valid = {
 			has_technology = tech_destroyers
+			has_technology = tech_interstellar_fleet_traditions
 		}
 
 		policy_flags = {}
@@ -91,14 +98,15 @@ ewp_ship_doctrine = {
 
 			# role improvement
 			shipsize_destroyer_tracking_add = 5
-			shipsize_destroyer_accuracy_add = 15
-			shipsize_destroyer_weapon_range_mult = 0.20
+			shipsize_destroyer_accuracy_add = 10
+			shipsize_destroyer_weapon_range_mult = 0.15
 
 			# versatility
 			shipsize_destroyer_speed_mult = 0.15
 
 			# global bonuses
 			ship_tracking_add = 10
+			ship_speed_mult = -0.10
 
 			# global eco mali
 			ship_corvette_cost_mult = 0.10
@@ -107,7 +115,7 @@ ewp_ship_doctrine = {
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
@@ -116,6 +124,7 @@ ewp_ship_doctrine = {
 
 		valid = {
 			has_technology = tech_cruisers
+			has_technology = tech_interstellar_fleet_traditions
 		}
 
 		policy_flags = {}
@@ -127,9 +136,9 @@ ewp_ship_doctrine = {
 			ship_cruiser_cost_mult = -0.15
 
 			# role improvement and versatility in one
-			shipsize_cruiser_hull_mult = 0.15
-			shipsize_cruiser_shield_mult = 0.15
-			shipsize_cruiser_armor_mult = 0.15
+			shipsize_cruiser_hull_mult = 0.10
+			shipsize_cruiser_shield_mult = 0.10
+			shipsize_cruiser_armor_mult = 0.10
 
 			shipsize_cruiser_evasion_add = 5
 			shipsize_cruiser_accuracy_add = 5
@@ -143,7 +152,7 @@ ewp_ship_doctrine = {
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
@@ -153,6 +162,7 @@ ewp_ship_doctrine = {
 
 		valid = {
 			has_technology = tech_battleships
+			has_technology = tech_interstellar_fleet_traditions
 		}
 
 		policy_flags = {}
@@ -171,17 +181,17 @@ ewp_ship_doctrine = {
 
 			# global bonuses - large powerful ships
 			ship_hull_mult = 0.15
-			ship_speed_mult = -0.15
 			ship_accuracy_add = 5
-
+			
 			# global eco mali
 			ship_corvette_cost_mult = 0.10
 			ship_destroyer_cost_mult = 0.10
 			ship_cruiser_cost_mult = 0.10
+			ship_speed_mult = -0.15
 		}
 
 		AI_weight = {
-			factor = 1
+			weight = 1
 		}
 	}
 
